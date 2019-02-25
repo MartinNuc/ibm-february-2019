@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My poem</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <h1>My dinner today</h1>
+
+    <script>
+      // method 1
+      let isPalindrome;
+      let word = prompt('Give me a word');
+      let reversed = '';
+      for (let i = word.length - 1; i >= 0; i--) {
+        reversed = reversed + word[i];
+      }
+
+      // method 2
+      let array = word.split('');
+      let reversedArray = array.reverse();
+      let reversedWord2 = reversedArray.join('');
+
+      // method 3
+      let reversedWord3 = word
+        .split('')
+        .reverse()
+        .join('');
+
+      isPalindrome = reversed === word;
+      if (isPalindrome) {
+        alert('it is palindrome');
+      } else {
+        alert('it is NOT palindrome');
+      }
+
+      function add(a, b) {
+        return a + b;
+      }
+      // 5 + 3 + 9
+      add(add(5, 3), 9);
+      let intermidiateResult = add(5, 3);
+      let result = add(intermidiateResult, 9);
+      console.log(result);
+
+      function printHelloNTimes(name, n) {
+        for (let i = 0; i < n; i++) {
+          console.log('Hello ' + name);
+        }
+      }
+      printHelloNTimes('Lukas', 5);
+
+      let array = [1, 2];
+      array.push(5);
+      array.push(6);
+
+      let hasHighNumber = array.some(x => x < 20);
+      let hasHighNumber = array.some(x => {
+        return x < 20;
+      });
+      let hasHighNumber = array.some(function(x) {
+        return x < 20;
+      });
+      array = [100, 200, 3];
+      let hasLowerThan20 = array.some(x => {
+        console.log(x);
+        return x < 20;
+      });
+      console.log(hasLowerThan20);
+      let arrayOne = [1, 2, 3];
+      let arrayTwo = [4, 5, 6];
+      let combination = [arrayOne, arrayTwo];
+
+      //[ [1,2,3], [4,5,6] ]
+      let together = [...arrayOne, ...arrayTwo];
+      console.log(together);
+    </script>
+
+    <ul class="shopping-cart">
+      <li id="nachos">nachos</li>
+      <li id="dip">cheese dip</li>
+      <li id="guacamole">guacamole</li>
+      <li id="water">water</li>
+    </ul>
+
+    <ul>
+      <li>another</li>
+    </ul>
+
+    <h1>About uncle James</h1>
+    <p class="text-red">Once upon a time there...</p>
+    <p class="text-blue">They lived together forever...</p>
+    <a href="./second.html">OOOOOOOOOOOOO</a>
+  </body>
+</html>
