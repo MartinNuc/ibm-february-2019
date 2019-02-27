@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .logo {
+      height: 50px;
+    }
+
+    .sidebar {
+      display: inline-block;
+      width: 30%;
+			vertical-align: top;
+    }
+    @media (max-width: 600px) {
+      .sidebar {
+        display: block;
+        width: 100%;
+        background: yellow;
+      }
+    }
+
+    .content {
+      display: inline-block;
+      width: 68%;
+    }
+    @media (max-width: 600px) {
+      .content {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">Logo</div>
+  <div class="container">
+    <div class="sidebar">
+      <a href="https://google.com">google</a>
+      <a href="https://ibm.com">ibm</a>
+    </div>
+    <div class="content">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, accusamus iusto cumque rerum nisi praesentium harum ab laboriosam, magni necessitatibus iste sed natus voluptates assumenda libero nobis ut. Ex, modi.
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam itaque sint maxime corrupti veritatis? Tempore dolores repellat quae libero, soluta provident ipsum modi aspernatur velit, quibusdam odio reiciendis ipsa fuga.
+    </div>
+  </div>
+</body>
+</html>
