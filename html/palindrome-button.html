@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+  <button type="button" onclick="askForWord()">Ask for word</button> 
+
+  <script>
+    function askForWord() {
+      let word = prompt('Enter a word:');
+      let reversed = word.split('').reverse().join('');
+
+      if (word === reversed) {
+        let button = document.querySelector('button');
+        button.style.backgroundColor = 'green';
+      } else {
+        let button = document.querySelector('button');
+        button.style.backgroundColor = 'red';
+      }
+    }
+  </script>  
+
+</body>
+</html>
