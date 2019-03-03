@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+  <style>
+    button {
+      background-color: red;
+      color: white;
+      position: absolute;
+      right: 50px;
+    }
+    .coin {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .hidden {
+      visibility: hidden;
+    }
+  </style>
+
+  <script>
+
+    let headIsOnTop = false;
+
+    function flip() {
+      let n = Math.random() * 6 + 4 // random number 4-10
+      for(let i = 0; i < n; i++) {
+        setTimeout(() => swap(), i * 500);
+      }
+    }
+
+    function swap() {
+      headIsOnTop = !headIsOnTop;
+      let heads = document.querySelector('.heads');
+      let tails = document.querySelector('.tails');
+      if (headIsOnTop) {
+        heads.style.visibility = 'visible';
+        tails.style.visibility = 'hidden';
+      } else {
+        heads.style.visibility = 'hidden';
+        tails.style.visibility = 'visible';
+      }
+
+      // easier solution just by toggling hidden class
+      // heads.classList.toggle('hidden');
+      // tails.classList.toggle('hidden');
+    }
+  </script>
+<body>
+
+  <img class="coin heads hidden" src="heads.jpeg">
+  <img class="coin tails" src="tails.jpeg">
+
+  <button onclick="flip()">flip</button>
+
+  <script>
+  </script>
+</body>
+</html>
