@@ -1,0 +1,17 @@
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "description": "This is my very first app in nodejs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "hello": "echo hi",
+    "showDirectory": "ls",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Martin Nuc",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "4.17.11"
+  }
+}

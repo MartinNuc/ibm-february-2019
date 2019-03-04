@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+  
+  <script>
+    let promise = fetch('http://stapi.co/api/v1/rest/season/search?pretty')
+    promise.then(response => response.json())
+      .then(response => console.log('loaded', response))
+  </script>
+
+</body>
+</html>
