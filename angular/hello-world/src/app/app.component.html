@@ -1,0 +1,27 @@
+<p>
+  this is in the variable: {{ myVariable }}
+</p>
+
+
+<app-hello-world></app-hello-world>
+<app-hello-world></app-hello-world>
+<app-hello-world></app-hello-world>
+<app-hello-world></app-hello-world>
+<app-hello-world></app-hello-world>
+
+
+<button (click)="incrementCounter()">
+  {{ counter }}
+</button>
+
+<button class="dropdown" (click)="toggleDropdown()">
+  dropdown
+  <div class="menu" *ngIf="opened">
+      <ul>
+        <li><a href="https://ibm.com">ibm.com</a></li>
+        <li><a href="https://google.com">google.com</a></li>
+      </ul>
+    </div>
+</button>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero error placeat illum distinctio, accusantium odit voluptate quasi praesentium. Corporis voluptates ullam consequuntur adipisci, quas quasi culpa ab debitis! Ad, nemo.</p>
