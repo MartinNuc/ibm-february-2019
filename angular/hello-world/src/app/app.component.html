@@ -2,13 +2,17 @@
   this is in the variable: {{ myVariable }}
 </p>
 
+<button (click)="startObservable()">Start observable</button>
 
-<app-hello-world></app-hello-world>
-<app-hello-world></app-hello-world>
-<app-hello-world></app-hello-world>
-<app-hello-world></app-hello-world>
-<app-hello-world></app-hello-world>
+<app-switch-style></app-switch-style>
 
+<app-counter></app-counter>
+
+<h1>From root component</h1>
+<app-hello-world></app-hello-world>
+<app-remember-button (buttonClicked)="recordTimestamp($event)">
+</app-remember-button>
+<app-timestamp-list [array]="timestampService.timestampList"></app-timestamp-list>
 
 <button (click)="incrementCounter()">
   {{ counter }}
