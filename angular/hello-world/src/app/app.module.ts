@@ -7,6 +7,11 @@ import { TimestampListComponent } from './timestamp-list/timestamp-list.componen
 import { RememberButtonComponent } from './remember-button/remember-button.component';
 import { SwitchStyleComponent } from './switch-style/switch-style.component';
 import { CounterComponent } from './counter/counter.component';
+import { ObservablesComponent } from './observables/observables.component';
+import { JokeComponent } from './joke/joke.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormComponent } from './form/form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,10 +20,15 @@ import { CounterComponent } from './counter/counter.component';
     TimestampListComponent,
     RememberButtonComponent,
     SwitchStyleComponent,
-    CounterComponent
+    CounterComponent,
+    ObservablesComponent,
+    JokeComponent,
+    FormComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,13 @@
+<form #registrationForm="ngForm">
+email: <input name="email" [(ngModel)]="email" required email>
+<div *ngIf="registrationForm.form.controls['email']?.invalid">
+  Email must be st and valid.
+</div>
+<br>
+street: <input name="street" [(ngModel)]="address.street">
+<br>
+city: <input name="city" [(ngModel)]="address.city">
+  <button [disabled]="registrationForm.invalid">Submit</button>
+</form>
+
+{{email}}

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { TimestampService } from './timestamp.service';
-import { interval } from 'rxjs';
-import { map, take } from 'rxjs/operators';
+import { interval, Observable } from 'rxjs';
+import { map, take, filter, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +14,11 @@ export class AppComponent {
   happy = true;
   opened = false;
 
-  constructor(public timestampService: TimestampService) {}
+  timestamps$ = this.timestampService.getObservable();
+
+  constructor(public timestampService: TimestampService) {
+
+  }
 
   toggleDropdown() {
     this.opened = !this.opened;
@@ -27,14 +31,6 @@ export class AppComponent {
   incrementCounter() {
     this.recordTimestamp(new Date());
     this.counter++;
-  }
-
-  startObservable() {
-    interval(1000)
-      .pipe(
-        map(x => x * 2),
-        take(5)
-      ).subscribe(value => console.log(value));
   }
 
   switchMood() {

@@ -1,8 +1,13 @@
+
+<app-form></app-form>
+
 <p>
   this is in the variable: {{ myVariable }}
 </p>
 
-<button (click)="startObservable()">Start observable</button>
+<app-joke></app-joke>
+
+<app-observables></app-observables>
 
 <app-switch-style></app-switch-style>
 
@@ -12,7 +17,7 @@
 <app-hello-world></app-hello-world>
 <app-remember-button (buttonClicked)="recordTimestamp($event)">
 </app-remember-button>
-<app-timestamp-list [array]="timestampService.timestampList"></app-timestamp-list>
+<app-timestamp-list [array]="timestamps$ | async"></app-timestamp-list>
 
 <button (click)="incrementCounter()">
   {{ counter }}

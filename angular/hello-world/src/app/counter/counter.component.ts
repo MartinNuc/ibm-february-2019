@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TimestampService } from '../timestamp.service';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-counter',
@@ -7,7 +8,12 @@ import { TimestampService } from '../timestamp.service';
   styleUrls: ['./counter.component.css']
 })
 export class CounterComponent implements OnInit {
-  constructor(public service: TimestampService) { }
+  count$ = this.service.getObservable().pipe(
+    map(array => array.length)
+  );
+  constructor(public service: TimestampService) {
+
+  }
 
   ngOnInit() {
   }
